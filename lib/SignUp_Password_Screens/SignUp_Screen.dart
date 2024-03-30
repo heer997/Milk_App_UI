@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:wscubetech_app_ui/SignUp_Password_Screens/Password.dart";
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
@@ -20,14 +21,11 @@ class SignUp extends StatelessWidget {
               colors: [
                 Colors.blue,
                 Colors.blue.shade700,
-                Colors.blue.shade600,
-                Colors.blue.shade500,
-                Colors.blue.shade400,
-                Colors.blue.shade300,
-                Colors.blue.shade200,
                 Colors.blue.shade100,
                 Colors.blue.shade50,
               ],
+              begin: const FractionalOffset(1.0, 0.0),
+              end: const FractionalOffset(0.0, 1.0),
             ),
           ),
           child: Center(
@@ -102,7 +100,37 @@ class SignUp extends StatelessWidget {
                     children: [
                       const SizedBox(width: 20.0),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          var username = usernameController.text;
+                          var email = emailController.text;
+                          var phone = phoneController.text;
+                          if (username == "" && email == "" && phone == "") {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return const AlertDialog(
+                                  title: Text(
+                                    "Please fill all details",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  content: Text("Enter required details"),
+                                );
+                              },
+                            );
+                          }
+                          else
+                            {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Password();
+                                  },
+                                ),
+                              );
+                            }
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                           fixedSize: const Size(150.0, 50.0),
