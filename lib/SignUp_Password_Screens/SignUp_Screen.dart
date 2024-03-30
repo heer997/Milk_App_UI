@@ -33,7 +33,7 @@ class SignUp extends StatelessWidget {
           child: Center(
             child: Container(
               width: 360.0,
-              height: 500.0,
+              height: 480.0,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12.0),
@@ -41,7 +41,7 @@ class SignUp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Sign Up",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
@@ -89,7 +89,7 @@ class SignUp extends StatelessWidget {
                     width: 330.0,
                     child: TextFormField(
                       controller: phoneController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.phone),
                         hintText: "Phone",
                         hintStyle: TextStyle(fontWeight: FontWeight.w400),
@@ -99,18 +99,29 @@ class SignUp extends StatelessWidget {
                   ),
                   const SizedBox(height: 30.0),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      const SizedBox(width: 20.0),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
+                          fixedSize: const Size(150.0, 50.0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11.0),
+                          ),
                         ),
-                        child: Text("Create", style: TextStyle(color: Colors.white),),
+                        child: const Text(
+                          "Create",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
+                      const SizedBox(width: 60.0),
                       TextButton(
                         onPressed: () {},
-                        child: Text("Sign In"),
+                        child: const Text(
+                          "Sign In",
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
                     ],
                   ),
