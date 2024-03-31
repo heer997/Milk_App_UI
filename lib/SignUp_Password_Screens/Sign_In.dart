@@ -1,13 +1,21 @@
 import "package:flutter/material.dart";
-import "package:wscubetech_app_ui/SignUp_Password_Screens/Password.dart";
-import "package:wscubetech_app_ui/SignUp_Password_Screens/Sign_In.dart";
+import "package:wscubetech_app_ui/SignUp_Password_Screens/Forgot_Password.dart";
+import "package:wscubetech_app_ui/SignUp_Password_Screens/SignUp_Screen.dart";
 
-class SignUp extends StatelessWidget {
-  SignUp({super.key});
+class SignIn extends StatefulWidget {
+  const SignIn({super.key});
 
+  @override
+  State<SignIn> createState() {
+    return SignInState();
+  }
+}
+
+class SignInState extends State<SignIn> {
   TextEditingController usernameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +28,6 @@ class SignUp extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.blue,
                 Colors.blue.shade700,
                 Colors.blue.shade100,
                 Colors.blue.shade50,
@@ -34,65 +41,61 @@ class SignUp extends StatelessWidget {
               width: 360.0,
               height: 480.0,
               decoration: BoxDecoration(
-                color: Colors.white,
                 borderRadius: BorderRadius.circular(12.0),
+                color: Colors.white,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Sign Up",
+                    "Sign In",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
                   ),
                   const SizedBox(height: 50.0),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(11.0),
+                      color: Colors.grey.shade300,
                     ),
                     width: 330.0,
                     child: TextFormField(
                       controller: usernameController,
                       decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.account_circle_outlined),
+                        border: InputBorder.none,
                         hintText: "Username",
-                        hintStyle: TextStyle(fontWeight: FontWeight.w400),
-                        border: InputBorder.none,
+                        hintStyle: TextStyle(fontWeight: FontWeight.w300),
+                        prefixIcon: Icon(Icons.account_circle_outlined),
                       ),
                     ),
                   ),
                   const SizedBox(height: 30.0),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(11.0),
+                      color: Colors.grey.shade300,
                     ),
                     width: 330.0,
                     child: TextFormField(
-                      controller: emailController,
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.email_outlined),
+                      controller: passwordController,
+                      obscureText: _obscureText,
+                      decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Email",
-                        hintStyle: TextStyle(fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 30.0),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(11.0),
-                    ),
-                    width: 330.0,
-                    child: TextFormField(
-                      controller: phoneController,
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.phone),
-                        hintText: "Phone",
-                        hintStyle: TextStyle(fontWeight: FontWeight.w400),
-                        border: InputBorder.none,
+                        hintText: "Password",
+                        hintStyle: const TextStyle(fontWeight: FontWeight.w300),
+                        prefixIcon: const Icon(Icons.lock_outline),
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            setState(
+                              () {
+                                _obscureText = !_obscureText;
+                              },
+                            );
+                          },
+                          icon: Icon(_obscureText
+                              ? Icons.visibility
+                              : Icons.visibility_off),
+                        ),
                       ),
                     ),
                   ),
@@ -103,10 +106,9 @@ class SignUp extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {
                           var username = usernameController.text;
-                          var email = emailController.text;
-                          var phone = phoneController.text;
+                          var password = passwordController.text;
 
-                          if (username == "" && email == "" && phone == "") {
+                          if (username == "" && password == "") {
                             showDialog(
                               context: context,
                               builder: (context) {
@@ -133,15 +135,6 @@ class SignUp extends StatelessWidget {
                                 );
                               },
                             );
-                          } else {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return Password();
-                                },
-                              ),
-                            );
                           }
                         },
                         style: ElevatedButton.styleFrom(
@@ -152,28 +145,45 @@ class SignUp extends StatelessWidget {
                           ),
                         ),
                         child: const Text(
-                          "Create",
+                          "Sign In",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      const SizedBox(width: 60.0),
+                      const SizedBox(width: 25.0),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return SignIn();
+                                return ForgotPassword();
                               },
                             ),
                           );
                         },
                         child: const Text(
-                          "Sign In",
+                          "Forgotten Password?",
                           style: TextStyle(color: Colors.blue),
                         ),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 50.0),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return SignUp();
+                          },
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      "Create a new Account",
+                      style: TextStyle(color: Colors.blue),
+                    ),
                   ),
                 ],
               ),
