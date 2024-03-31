@@ -19,6 +19,16 @@ class ForgotPasswordState extends State<ForgotPassword> {
         return FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+          ),
+          backgroundColor: Colors.transparent,
+        ),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(

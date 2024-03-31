@@ -88,6 +88,7 @@ class SignUp extends StatelessWidget {
                     width: 330.0,
                     child: TextFormField(
                       controller: phoneController,
+                      maxLength: 10,
                       decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.phone),
                         hintText: "Phone",
@@ -106,7 +107,7 @@ class SignUp extends StatelessWidget {
                           var email = emailController.text;
                           var phone = phoneController.text;
 
-                          if (username == "" && email == "" && phone == "") {
+                          if (username.isEmpty || email.isEmpty || phone.isEmpty) {
                             showDialog(
                               context: context,
                               builder: (context) {

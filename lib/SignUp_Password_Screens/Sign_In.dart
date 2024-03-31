@@ -108,7 +108,7 @@ class SignInState extends State<SignIn> {
                           var username = usernameController.text;
                           var password = passwordController.text;
 
-                          if (username == "" && password == "") {
+                          if (username.isEmpty || password.isEmpty) {
                             showDialog(
                               context: context,
                               builder: (context) {

@@ -23,6 +23,16 @@ class _PasswordState extends State<Password> {
         return FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+          ),
+        ),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -117,7 +127,7 @@ class _PasswordState extends State<Password> {
                     onPressed: () {
                       var password = passwordController.text;
                       var confirmPassword = confirmPasswordController.text;
-                      if (password == "" && confirmPassword == "") {
+                      if (password.isEmpty || confirmPassword.isEmpty) {
                         showDialog(
                           context: context,
                           builder: (context) {
