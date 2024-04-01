@@ -1,8 +1,9 @@
 import "package:flutter/material.dart";
+import "package:wscubetech_app_ui/Notification/Notifications.dart";
 import "package:wscubetech_app_ui/Splash_Screen/Splash_Screen.dart";
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.grey,
-          centerTitle: true,
+          backgroundColor: Colors.blue,
         ),
       ),
       home: const SplashScreen(),
@@ -24,23 +24,40 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class WscubeTechApp extends StatefulWidget {
-  const WscubeTechApp({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  State<WscubeTechApp> createState()
-  {
-    return WscubeTechAppState();
+  State<HomePage> createState() {
+    return HomePageState();
   }
 }
-class WscubeTechAppState extends State<WscubeTechApp>
-{
+
+class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Notifications();
+                  },
+                ),
+              );
+            },
+            icon: const Icon(Icons.notification_add_outlined,
+                color: Colors.white),
+          ),
+        ],
         title: const Text(
-          "HomeScreen",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "Maleno",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       body: Center(),

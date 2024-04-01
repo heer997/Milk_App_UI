@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:wscubetech_app_ui/HomePage/HomePage_Screen.dart";
 import "package:wscubetech_app_ui/SignUp_Password_Screens/Forgot_Password.dart";
 import "package:wscubetech_app_ui/SignUp_Password_Screens/SignUp_Screen.dart";
 
@@ -136,6 +137,17 @@ class SignInState extends State<SignIn> {
                               },
                             );
                           }
+                          else
+                            {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return HomePage();
+                                  },
+                                ),
+                              );
+                            }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
