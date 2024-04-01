@@ -1,7 +1,5 @@
 import "dart:async";
 import "package:flutter/material.dart";
-import "package:wscubetech_app_ui/HomePage/HomePage_Screen.dart";
-import "package:wscubetech_app_ui/SignUp_Password_Screens/SignUp_Screen.dart";
 import "package:wscubetech_app_ui/SignUp_Password_Screens/Sign_In.dart";
 
 class SplashScreen extends StatefulWidget {
