@@ -48,7 +48,8 @@ class Notifications extends StatelessWidget {
                       title: Text(notificationsInfoList[index].toString()),
                       trailing: Text(
                         trailingNumbers[index].toString(),
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
                       ),
                     ),
                   );
