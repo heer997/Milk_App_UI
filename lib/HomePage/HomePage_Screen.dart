@@ -190,20 +190,73 @@ class HomePageState extends State<HomePage> {
                     alignment: Alignment.centerLeft,
                     child: const Text(
                       "Popular Now",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 25.0),
                     ),
                   ),
                   const SizedBox(height: 10.0),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       UiHelper.customContainer3(
-                        height: 200.0,
-                        width: 170.0,
-                        image: "",
+                        height: 220.0,
+                        width: 160.0,
+                        image: "assets/images/Buffelo_Milk_2.jpg",
+                      ),
+                      UiHelper.customContainer3(
+                        height: 220.0,
+                        width: 160.0,
+                        image: "assets/images/Camel_Milk_Powder.webp",
                       ),
                     ],
                   ),
+                  const SizedBox(height: 30.0),
+                  Card(
+                    elevation: 20.0,
+                    child: Container(
+                      width: 350.0,
+                      height: 160.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(13.0),
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/Vedic_Significance.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                      children: [
+                        const Text(
+                          "Beverages",
+                          style:
+                              TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                        ),
+                        const SizedBox(width: 30.0),
+                        Image.asset("assets/images/milkicon.png", width: 30.0, height: 30.0),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 15.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      UiHelper.customContainer3(
+                        height: 220.0,
+                        width: 160.0,
+                        image: "assets/images/Amul_kool_bottle.webp",
+                      ),
+                      UiHelper.customContainer3(
+                        height: 220.0,
+                        width: 160.0,
+                        image: "assets/images/Amul_Lassi_Bottle.png",
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 40.0),
                 ],
               ),
             ),

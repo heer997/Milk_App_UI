@@ -62,8 +62,10 @@ class UiHelper {
         height: height,
         width: width,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(13.0),
           image: DecorationImage(
             image: AssetImage(image),
+            fit: BoxFit.cover,
           ),
         ),
       ),
