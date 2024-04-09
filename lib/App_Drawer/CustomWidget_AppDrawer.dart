@@ -96,4 +96,43 @@ class UiHelper {
       ),
     );
   }
+
+  static customTextButton(
+      {required String text,
+      required Color color,
+      required Color color2,
+      required VoidCallback callback}) {
+    return TextButton(
+      onPressed: callback,
+      style: TextButton.styleFrom(
+        backgroundColor: color,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(fontWeight: FontWeight.bold, color: color2),
+      ),
+    );
+  }
+
+  static customTextButton2(
+      {required VoidCallback callback,
+      required String text,
+      required Color color,
+      required Color color2}) {
+    return TextButton(
+      onPressed: callback,
+      style: TextButton.styleFrom(
+        backgroundColor: color,
+        fixedSize: const Size(300.0, 50.0),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 20.0, color: color2),
+      ),
+    );
+  }
 }

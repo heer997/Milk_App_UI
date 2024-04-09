@@ -6,6 +6,7 @@ import "package:wscubetech_app_ui/Category/Dahi_Category/Dahi_category.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Ghee_category.dart";
 import "package:wscubetech_app_ui/Category/Milk_Category/Milk_category.dart";
 import "package:wscubetech_app_ui/HomePage/Polular_Now/Buffalo_Milk.dart";
+import "package:wscubetech_app_ui/HomePage/Polular_Now/Camel_Milk.dart";
 import "package:wscubetech_app_ui/Notification/Notifications.dart";
 import "package:wscubetech_app_ui/Splash_Screen/Splash_Screen.dart";
 
@@ -274,11 +275,23 @@ class HomePageState extends State<HomePage> {
                           text: "Buffelo Milk",
                         ),
                       ),
-                      UiHelper.customContainer3(
-                        height: 220.0,
-                        width: 168.0,
-                        image: "assets/images/Camel_Milk_Powder.webp",
-                        text: "Camel Milk",
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return CamelMilk();
+                              },
+                            ),
+                          );
+                        },
+                        child: UiHelper.customContainer3(
+                          height: 220.0,
+                          width: 168.0,
+                          image: "assets/images/Camel_Milk_Powder.webp",
+                          text: "Camel Milk",
+                        ),
                       ),
                     ],
                   ),
