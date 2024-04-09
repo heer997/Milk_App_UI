@@ -55,19 +55,44 @@ class UiHelper {
   }
 
   static customContainer3(
-      {required double height, required double width, required String image}) {
+      {required double height,
+      required double width,
+      required String image,
+      required String text}) {
     return Card(
       elevation: 20.0,
-      child: Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(13.0),
-          image: DecorationImage(
-            image: AssetImage(image),
-            fit: BoxFit.cover,
+      child: Stack(
+        children: [
+          // Container(
+          //   child: Text(text),
+          //   decoration: BoxDecoration(
+          //     color: Colors.blue,
+          //   ),
+          // ),
+          Container(
+            height: height,
+            width: width,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(13.0),
+              image: DecorationImage(
+                image: AssetImage(image),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(top: 170.0, left: 30.0),
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 18.0,
+                // backgroundColor: Colors.blue,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

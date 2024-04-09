@@ -1,7 +1,11 @@
-import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/App_Drawer.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/ButterMilk_category.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/Dahi_category.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/Ghee_category.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Milk_category.dart";
+import "package:wscubetech_app_ui/HomePage/Polular_Now/Buffalo_Milk.dart";
 import "package:wscubetech_app_ui/Notification/Notifications.dart";
 import "package:wscubetech_app_ui/Splash_Screen/Splash_Screen.dart";
 
@@ -72,7 +76,7 @@ class HomePageState extends State<HomePage> {
         body: SingleChildScrollView(
           child: Center(
             child: SizedBox(
-              width: 350.0,
+              width: 360.0,
               child: Column(
                 children: [
                   const SizedBox(height: 30.0),
@@ -155,32 +159,80 @@ class HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        UiHelper.customContainer(
-                          height: 70.0,
-                          width: 70.0,
-                          image: "assets/images/milk.jpg",
-                          text: "Milk",
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return MilkCategory();
+                                },
+                              ),
+                            );
+                          },
+                          child: UiHelper.customContainer(
+                            height: 70.0,
+                            width: 70.0,
+                            image: "assets/images/milk.jpg",
+                            text: "Milk",
+                          ),
                         ),
                         const SizedBox(width: 10.0),
-                        UiHelper.customContainer(
-                          height: 70.0,
-                          width: 70.0,
-                          image: "assets/images/ghee-pot1.webp",
-                          text: "Ghee",
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return GheeCategory();
+                                },
+                              ),
+                            );
+                          },
+                          child: UiHelper.customContainer(
+                            height: 70.0,
+                            width: 70.0,
+                            image: "assets/images/ghee-pot1.webp",
+                            text: "Ghee",
+                          ),
                         ),
                         const SizedBox(width: 10.0),
-                        UiHelper.customContainer(
-                          height: 70.0,
-                          width: 70.0,
-                          image: "assets/images/dahi.jpg",
-                          text: "Dahi",
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return DahiCategory();
+                                },
+                              ),
+                            );
+                          },
+                          child: UiHelper.customContainer(
+                            height: 70.0,
+                            width: 70.0,
+                            image: "assets/images/dahi.jpg",
+                            text: "Dahi",
+                          ),
                         ),
                         const SizedBox(width: 10.0),
-                        UiHelper.customContainer(
-                          height: 70.0,
-                          width: 70.0,
-                          image: "assets/images/buttermilk.jpg",
-                          text: "Butter Milk",
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return ButterMilkCategory();
+                                },
+                              ),
+                            );
+                          },
+                          child: UiHelper.customContainer(
+                            height: 70.0,
+                            width: 70.0,
+                            image: "assets/images/buttermilk.jpg",
+                            text: "Butter Milk",
+                          ),
                         ),
                       ],
                     ),
@@ -188,25 +240,45 @@ class HomePageState extends State<HomePage> {
                   const SizedBox(height: 40.0),
                   Container(
                     alignment: Alignment.centerLeft,
-                    child: const Text(
-                      "Popular Now",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 25.0),
+                    child: Row(
+                      children: [
+                        const Text(
+                          "Popular Now",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25.0),
+                        ),
+                        const SizedBox(width: 10.0),
+                        Image.asset("assets/images/fire_GIF.gif", height: 25.0, width: 25.0),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 10.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      UiHelper.customContainer3(
-                        height: 220.0,
-                        width: 160.0,
-                        image: "assets/images/Buffelo_Milk_2.jpg",
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return BuffaloMilk();
+                              },
+                            ),
+                          );
+                        },
+                        child: UiHelper.customContainer3(
+                          height: 220.0,
+                          width: 168.0,
+                          image: "assets/images/Buffelo_Milk_2.jpg",
+                          text: "Buffelo Milk",
+                        ),
                       ),
                       UiHelper.customContainer3(
                         height: 220.0,
-                        width: 160.0,
+                        width: 168.0,
                         image: "assets/images/Camel_Milk_Powder.webp",
+                        text: "Camel Milk",
                       ),
                     ],
                   ),
@@ -218,7 +290,7 @@ class HomePageState extends State<HomePage> {
                       height: 160.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(13.0),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage("assets/images/Vedic_Significance.jpg"),
                           fit: BoxFit.cover,
                         ),
@@ -246,13 +318,15 @@ class HomePageState extends State<HomePage> {
                     children: [
                       UiHelper.customContainer3(
                         height: 220.0,
-                        width: 160.0,
+                        width: 168.0,
                         image: "assets/images/Amul_kool_bottle.webp",
+                        text: "MilkShake",
                       ),
                       UiHelper.customContainer3(
                         height: 220.0,
-                        width: 160.0,
+                        width: 168.0,
                         image: "assets/images/Amul_Lassi_Bottle.png",
+                        text: "    Lassi",
                       ),
                     ],
                   ),
