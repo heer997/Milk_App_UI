@@ -1,5 +1,10 @@
 import "package:flutter/material.dart";
-import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
+import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/App_Drawer/Screens/Cart.dart";
+import "package:wscubetech_app_ui/App_Drawer/Screens/Edit_Profile.dart";
+import "package:wscubetech_app_ui/App_Drawer/Screens/My_Profile.dart";
+import "package:wscubetech_app_ui/HomePage/HomePage_Screen.dart";
+import "package:wscubetech_app_ui/SignUp_Password_Screens/Sign_In.dart";
 
 class AppDrawer extends StatelessWidget {
   AppDrawer({super.key});
@@ -47,31 +52,76 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.account_circle),
             title: const Text("My Profile"),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MyProfile();
+                  },
+                ),
+              );
+            },
           ),
           const Divider(color: Colors.white),
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text("Home"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return HomePage();
+                  },
+                ),
+              );
+            },
           ),
           const Divider(color: Colors.white),
           ListTile(
             leading: const Icon(Icons.shopping_cart_outlined),
             title: const Text("Cart"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Cart();
+                  },
+                ),
+              );
+            },
           ),
           const Divider(color: Colors.white),
           ListTile(
             leading: const Icon(Icons.edit),
             title: const Text("Edit Profile"),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return EditProfile();
+                  },
+                ),
+              );
+            },
           ),
           const Divider(color: Colors.white),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text("Logout"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignIn();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),

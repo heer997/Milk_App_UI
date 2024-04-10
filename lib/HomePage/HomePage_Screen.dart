@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/App_Drawer.dart";
-import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
+import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
 import "package:wscubetech_app_ui/Beverages/Lassi.dart";
 import "package:wscubetech_app_ui/Beverages/MilkShake.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/ButterMilk_category.dart";
@@ -55,6 +55,7 @@ class HomePageState extends State<HomePage> {
       child: Scaffold(
         drawer: AppDrawer(),
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.white),
           actions: [
             IconButton(
               onPressed: () {
@@ -251,7 +252,8 @@ class HomePageState extends State<HomePage> {
                               fontWeight: FontWeight.bold, fontSize: 25.0),
                         ),
                         const SizedBox(width: 10.0),
-                        Image.asset("assets/images/fire_GIF.gif", height: 25.0, width: 25.0),
+                        Image.asset("assets/images/fire_GIF.gif",
+                            height: 25.0, width: 25.0),
                       ],
                     ),
                   ),
@@ -306,7 +308,8 @@ class HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(13.0),
                         image: const DecorationImage(
-                          image: AssetImage("assets/images/Vedic_Significance.jpg"),
+                          image: AssetImage(
+                              "assets/images/Vedic_Significance.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -319,11 +322,12 @@ class HomePageState extends State<HomePage> {
                       children: [
                         const Text(
                           "Beverages",
-                          style:
-                              TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25.0),
                         ),
                         const SizedBox(width: 30.0),
-                        Image.asset("assets/images/milkicon.png", width: 30.0, height: 30.0),
+                        Image.asset("assets/images/milkicon.png",
+                            width: 30.0, height: 30.0),
                       ],
                     ),
                   ),

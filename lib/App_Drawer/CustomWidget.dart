@@ -63,12 +63,6 @@ class UiHelper {
       elevation: 20.0,
       child: Stack(
         children: [
-          // Container(
-          //   child: Text(text),
-          //   decoration: BoxDecoration(
-          //     color: Colors.blue,
-          //   ),
-          // ),
           Container(
             height: height,
             width: width,
@@ -132,6 +126,19 @@ class UiHelper {
         text,
         style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 20.0, color: color2),
+      ),
+    );
+  }
+
+  static customTextFormField(
+      {required TextEditingController controller, required String text}) {
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        hintText: text,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(11.0),
+        ),
       ),
     );
   }

@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
 
-class NestleMilk extends StatefulWidget {
-  const NestleMilk({super.key});
+class SarasDahi extends StatefulWidget {
+  const SarasDahi({super.key});
 
   @override
-  State<NestleMilk> createState() => _NestleMilkState();
+  State<SarasDahi> createState() => _SarasDahiState();
 }
 
-class _NestleMilkState extends State<NestleMilk> {
+class _SarasDahiState extends State<SarasDahi> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,7 +22,7 @@ class _NestleMilkState extends State<NestleMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Nestle Milk",
+          "Saras Dahi",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -41,13 +41,13 @@ class _NestleMilkState extends State<NestleMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
+                Image.asset("assets/images/Saras_Dahi.jpg",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Nestle Milk",
+                    "Saras Dahi",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
@@ -63,7 +63,7 @@ class _NestleMilkState extends State<NestleMilk> {
                         style: TextStyle(fontSize: 20.0),
                       ),
                       Text(
-                        "Fresh Milk",
+                        "Fresh Dahi",
                         style: TextStyle(fontSize: 20.0),
                       ),
                     ],
