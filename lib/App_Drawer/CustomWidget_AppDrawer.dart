@@ -81,13 +81,13 @@ class UiHelper {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 170.0, left: 30.0),
+            padding: const EdgeInsets.only(top: 190.0, left: 30.0),
             child: Text(
               text,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
-                fontSize: 18.0,
+                fontSize: 12.0,
                 // backgroundColor: Colors.blue,
               ),
             ),

@@ -1,20 +1,22 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Buffalo's_Milk/Buffalo_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Camel's_Milk/Camel_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Cow's_Milk_All.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Goat's_Milk/Goat_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Sheep's_Milk/Sheep_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Amul_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Avin_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/DudhsagarDairy_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/MotherDairy_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Nestle_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Quality_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Saras_Milk.dart";
 
-class MilkCategory extends StatelessWidget {
-  const MilkCategory({super.key});
+class CowsMilk extends StatelessWidget {
+  const CowsMilk({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Milk Category",
+          "Cow's Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,
@@ -41,8 +43,8 @@ class MilkCategory extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context){
-                              return CowsMilk();
+                            builder: (context) {
+                              return AmulMilk();
                             },
                           ),
                         );
@@ -50,8 +52,8 @@ class MilkCategory extends StatelessWidget {
                       child: UiHelper.customContainer3(
                         height: 220.0,
                         width: 168.0,
-                        image: "assets/images/Cow.jpg",
-                        text: "Cow's Milk",
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Amul Milk",
                       ),
                     ),
                     InkWell(
@@ -60,7 +62,7 @@ class MilkCategory extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return GoatMilk();
+                              return SarasMilk();
                             },
                           ),
                         );
@@ -68,8 +70,8 @@ class MilkCategory extends StatelessWidget {
                       child: UiHelper.customContainer3(
                         height: 220.0,
                         width: 168.0,
-                        image: "assets/images/goat.png",
-                        text: "Goat's Milk",
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Saras Milk",
                       ),
                     ),
                   ],
@@ -84,7 +86,7 @@ class MilkCategory extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return CamelMilk();
+                              return MotherDairyMilk();
                             },
                           ),
                         );
@@ -92,8 +94,8 @@ class MilkCategory extends StatelessWidget {
                       child: UiHelper.customContainer3(
                         height: 220.0,
                         width: 168.0,
-                        image: "assets/images/camel1.jpg",
-                        text: "Camel's Milk",
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Mother Dairy",
                       ),
                     ),
                     GestureDetector(
@@ -102,7 +104,7 @@ class MilkCategory extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return BuffaloMilk();
+                              return NestleMilk();
                             },
                           ),
                         );
@@ -110,8 +112,8 @@ class MilkCategory extends StatelessWidget {
                       child: UiHelper.customContainer3(
                         height: 220.0,
                         width: 168.0,
-                        image: "assets/images/buffalo.webp",
-                        text: "Buffalo's Milk",
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Nestle",
                       ),
                     ),
                   ],
@@ -126,7 +128,7 @@ class MilkCategory extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return SheepMilk();
+                              return AvinMilk();
                             },
                           ),
                         );
@@ -134,12 +136,55 @@ class MilkCategory extends StatelessWidget {
                       child: UiHelper.customContainer3(
                         height: 220.0,
                         width: 168.0,
-                        image: "assets/images/sheep.webp",
-                        text: "Sheep's Milk",
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Avin Milk",
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return DudhsagarDairyMilk();
+                            },
+                          ),
+                        );
+                      },
+                      child: UiHelper.customContainer3(
+                        height: 220.0,
+                        width: 168.0,
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Dudhsagar Dairy",
                       ),
                     ),
                   ],
                 ),
+                const SizedBox(height: 15.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return QualityMilk();
+                            },
+                          ),
+                        );
+                      },
+                      child: UiHelper.customContainer3(
+                        height: 220.0,
+                        width: 168.0,
+                        image: "assets/images/Mr_Butler_Bottle_image.webp",
+                        text: "Quality",
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30.0),
               ],
             ),
           ),

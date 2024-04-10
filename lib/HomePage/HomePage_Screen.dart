@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/App_Drawer.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
+import "package:wscubetech_app_ui/Beverages/Lassi.dart";
+import "package:wscubetech_app_ui/Beverages/MilkShake.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/ButterMilk_category.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/Dahi_category.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Ghee_category.dart";
@@ -329,17 +331,41 @@ class HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      UiHelper.customContainer3(
-                        height: 220.0,
-                        width: 168.0,
-                        image: "assets/images/Amul_kool_bottle.webp",
-                        text: "MilkShake",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return MilkShake();
+                              },
+                            ),
+                          );
+                        },
+                        child: UiHelper.customContainer3(
+                          height: 220.0,
+                          width: 168.0,
+                          image: "assets/images/Amul_kool_bottle.webp",
+                          text: "MilkShake",
+                        ),
                       ),
-                      UiHelper.customContainer3(
-                        height: 220.0,
-                        width: 168.0,
-                        image: "assets/images/Amul_Lassi_Bottle.png",
-                        text: "    Lassi",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Lassi();
+                              },
+                            ),
+                          );
+                        },
+                        child: UiHelper.customContainer3(
+                          height: 220.0,
+                          width: 168.0,
+                          image: "assets/images/Amul_Lassi_Bottle.png",
+                          text: "    Lassi",
+                        ),
                       ),
                     ],
                   ),

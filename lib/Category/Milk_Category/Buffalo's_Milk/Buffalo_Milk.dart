@@ -41,7 +41,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Buffalo_Milk_Bottle.png",
+                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(

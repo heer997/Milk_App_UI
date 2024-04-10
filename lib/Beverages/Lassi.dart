@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
 
-class BuffaloMilk extends StatefulWidget {
-  const BuffaloMilk({super.key});
+class Lassi extends StatefulWidget {
+  const Lassi({super.key});
 
   @override
-  State<BuffaloMilk> createState() => _BuffaloMilkState();
+  State<Lassi> createState() => _LassiState();
 }
 
-class _BuffaloMilkState extends State<BuffaloMilk> {
+class _LassiState extends State<Lassi> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,7 +22,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Buffalo Milk",
+          "Lassi",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -41,15 +41,15 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Buffalo_Milk_Bottle.png",
+                Image.asset("assets/images/Lassi_Amul_Bottle.webp",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Buffalo Milk",
+                    "Amul Lassi",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
                 ),
                 const SizedBox(height: 10.0),
@@ -63,7 +63,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                         style: TextStyle(fontSize: 20.0),
                       ),
                       Text(
-                        "Fresh Milk",
+                        "Fresh Lassi",
                         style: TextStyle(fontSize: 20.0),
                       ),
                     ],
@@ -75,7 +75,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                   child: const Text(
                     "Rs. 110L",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
                 ),
                 const SizedBox(height: 20.0),
@@ -127,7 +127,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                            () {
+                                () {
                               isPressed = !isPressed;
                             },
                           );
@@ -140,7 +140,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                            () {
+                                () {
                               isPressed2 = !isPressed2;
                             },
                           );
@@ -153,7 +153,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                            () {
+                                () {
                               isPressed3 = !isPressed3;
                             },
                           );
@@ -166,7 +166,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                            () {
+                                () {
                               isPressed4 = !isPressed4;
                             },
                           );
@@ -179,7 +179,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                            () {
+                                () {
                               isPressed5 = !isPressed5;
                             },
                           );
@@ -208,8 +208,8 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                   padding: EdgeInsets.only(left: 10.0),
                   child: Text(
                     "India is the largest milk producer in the whole world Milk can be adulterated with"
-                    " water to increase it volume or"
-                    " it may be adulterated with urea or starch to increase the content of total solid.",
+                        " water to increase it volume or"
+                        " it may be adulterated with urea or starch to increase the content of total solid.",
                     style: TextStyle(fontSize: 17.0),
                   ),
                 ),
@@ -278,7 +278,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                 UiHelper.customTextButton2(
                   callback: () {
                     setState(
-                      () {
+                          () {
                         isPressed6 = !isPressed6;
                       },
                     );
@@ -291,7 +291,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                 UiHelper.customTextButton2(
                   callback: () {
                     setState(
-                      () {
+                          () {
                         isPressed7 = !isPressed7;
                       },
                     );

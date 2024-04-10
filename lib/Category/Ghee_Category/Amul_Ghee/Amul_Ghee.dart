@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget_AppDrawer.dart";
 
-class BuffaloMilk extends StatefulWidget {
-  const BuffaloMilk({super.key});
+class AmulGhee extends StatefulWidget {
+  const AmulGhee({super.key});
 
   @override
-  State<BuffaloMilk> createState() => _BuffaloMilkState();
+  State<AmulGhee> createState() => _AmulGheeState();
 }
 
-class _BuffaloMilkState extends State<BuffaloMilk> {
+class _AmulGheeState extends State<AmulGhee> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,7 +22,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Buffalo Milk",
+          "Amul Ghee",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -41,13 +41,13 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Buffalo_Milk_Bottle.png",
+                Image.asset("assets/images/Amul_Cow_Ghee.jpg",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Buffalo Milk",
+                    "Amul Ghee",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
@@ -63,7 +63,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                         style: TextStyle(fontSize: 20.0),
                       ),
                       Text(
-                        "Fresh Milk",
+                        "Fresh Ghee",
                         style: TextStyle(fontSize: 20.0),
                       ),
                     ],
@@ -73,7 +73,7 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Rs. 110L",
+                    "Rs. 900L",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),

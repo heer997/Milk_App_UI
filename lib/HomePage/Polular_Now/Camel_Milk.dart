@@ -22,10 +22,11 @@ class _CamelMilkState extends State<CamelMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Buffalo Milk",
+          "Camel Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
+        centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {},
@@ -48,7 +49,7 @@ class _CamelMilkState extends State<CamelMilk> {
                   child: const Text(
                     "Camel Milk",
                     style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
                 ),
                 const SizedBox(height: 10.0),
@@ -74,7 +75,7 @@ class _CamelMilkState extends State<CamelMilk> {
                   child: const Text(
                     "Rs. 110L",
                     style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
                 ),
                 const SizedBox(height: 20.0),
@@ -126,7 +127,7 @@ class _CamelMilkState extends State<CamelMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                                () {
+                            () {
                               isPressed = !isPressed;
                             },
                           );
@@ -139,7 +140,7 @@ class _CamelMilkState extends State<CamelMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                                () {
+                            () {
                               isPressed2 = !isPressed2;
                             },
                           );
@@ -152,7 +153,7 @@ class _CamelMilkState extends State<CamelMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                                () {
+                            () {
                               isPressed3 = !isPressed3;
                             },
                           );
@@ -165,7 +166,7 @@ class _CamelMilkState extends State<CamelMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                                () {
+                            () {
                               isPressed4 = !isPressed4;
                             },
                           );
@@ -178,7 +179,7 @@ class _CamelMilkState extends State<CamelMilk> {
                       UiHelper.customTextButton(
                         callback: () {
                           setState(
-                                () {
+                            () {
                               isPressed5 = !isPressed5;
                             },
                           );
@@ -207,8 +208,8 @@ class _CamelMilkState extends State<CamelMilk> {
                   padding: EdgeInsets.only(left: 10.0),
                   child: Text(
                     "India is the largest milk producer in the whole world Milk can be adulterated with"
-                        " water to increase it volume or"
-                        " it may be adulterated with urea or starch to increase the content of total solid.",
+                    " water to increase it volume or"
+                    " it may be adulterated with urea or starch to increase the content of total solid.",
                     style: TextStyle(fontSize: 17.0),
                   ),
                 ),
@@ -277,7 +278,7 @@ class _CamelMilkState extends State<CamelMilk> {
                 UiHelper.customTextButton2(
                   callback: () {
                     setState(
-                          () {
+                      () {
                         isPressed6 = !isPressed6;
                       },
                     );
@@ -290,7 +291,7 @@ class _CamelMilkState extends State<CamelMilk> {
                 UiHelper.customTextButton2(
                   callback: () {
                     setState(
-                          () {
+                      () {
                         isPressed7 = !isPressed7;
                       },
                     );
