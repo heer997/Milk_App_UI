@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/GRB_Ghee/GRBGhee_Notifications.dart";
 
 class GRBGhee extends StatefulWidget {
   const GRBGhee({super.key});
@@ -29,7 +30,16 @@ class _GRBGheeState extends State<GRBGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                   builder: (context) {
+                     return GRBGheeNotifications();
+                   },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

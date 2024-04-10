@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/Dudhsagar_ButterMilk/DudhsagarButterMilk_Notifications.dart";
 
 class DudhsagarButterMilk extends StatefulWidget {
   const DudhsagarButterMilk({super.key});
@@ -29,7 +30,16 @@ class _DudhsagarButterMilkState extends State<DudhsagarButterMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DudhsagarButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Beverages/MilkShake/MilkShake_Notifications.dart";
 
-class NestleMilk extends StatefulWidget {
-  const NestleMilk({super.key});
+class MilkShake extends StatefulWidget {
+  const MilkShake({super.key});
 
   @override
-  State<NestleMilk> createState() => _NestleMilkState();
+  State<MilkShake> createState() => _MilkShakeState();
 }
 
-class _NestleMilkState extends State<NestleMilk> {
+class _MilkShakeState extends State<MilkShake> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _NestleMilkState extends State<NestleMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Nestle Milk",
+          "MilkShake",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MilkShakeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -41,13 +51,13 @@ class _NestleMilkState extends State<NestleMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
+                Image.asset("assets/images/Amul_MilkShake.webp",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Nestle Milk",
+                    "Amul MilkShake",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
@@ -63,7 +73,7 @@ class _NestleMilkState extends State<NestleMilk> {
                         style: TextStyle(fontSize: 20.0),
                       ),
                       Text(
-                        "Fresh Milk",
+                        "Fresh MilkShake",
                         style: TextStyle(fontSize: 20.0),
                       ),
                     ],

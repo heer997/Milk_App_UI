@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Nestle_Milk/NestleMilk_Notifications.dart";
 
-class AmulMilk extends StatefulWidget {
-  const AmulMilk({super.key});
+class NestleMilk extends StatefulWidget {
+  const NestleMilk({super.key});
 
   @override
-  State<AmulMilk> createState() => _AmulMilkState();
+  State<NestleMilk> createState() => _NestleMilkState();
 }
 
-class _AmulMilkState extends State<AmulMilk> {
+class _NestleMilkState extends State<NestleMilk> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _AmulMilkState extends State<AmulMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Amul Milk",
+          "Nestle Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return NestleMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -47,7 +57,7 @@ class _AmulMilkState extends State<AmulMilk> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Amul Milk",
+                    "Nestle Milk",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),

@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/Quality_ButterMilk/QualityButterMilk_Notifications.dart";
 
 class QualityButterMilk extends StatefulWidget {
   const QualityButterMilk({super.key});
@@ -29,7 +30,16 @@ class _QualityButterMilkState extends State<QualityButterMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return QualityButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

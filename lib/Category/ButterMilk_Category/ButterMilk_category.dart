@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/Amul_ButterMilk/Amul_ButterMilk.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/ButterMilk_Notifications.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/Dudhsagar_ButterMilk/Dudhsagar_ButterMilk.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/GRB_ButterMilk/Nestle_ButterMilk.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/MotherDairy_ButterMilk/MotherDairy_ButterMilk.dart";
@@ -23,7 +24,16 @@ class ButterMilkCategory extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

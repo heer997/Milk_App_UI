@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/MotherDairy_ButterMilk/MotherDairyButterMilk_Notifications.dart";
 
 class MotherDairyButterMilk extends StatefulWidget {
   const MotherDairyButterMilk({super.key});
@@ -29,7 +30,16 @@ class _MotherDairyButterMilkState extends State<MotherDairyButterMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MotherDairyButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

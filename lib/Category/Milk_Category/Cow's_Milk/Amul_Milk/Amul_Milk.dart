@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Amul_Milk/AmulMilk_Notifications.dart";
 
-class DudhsagarDairyMilk extends StatefulWidget {
-  const DudhsagarDairyMilk({super.key});
+class AmulMilk extends StatefulWidget {
+  const AmulMilk({super.key});
 
   @override
-  State<DudhsagarDairyMilk> createState() => _DudhsagarDairyMilkState();
+  State<AmulMilk> createState() => _AmulMilkState();
 }
 
-class _DudhsagarDairyMilkState extends State<DudhsagarDairyMilk> {
+class _AmulMilkState extends State<AmulMilk> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _DudhsagarDairyMilkState extends State<DudhsagarDairyMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "DudhsagarDairy Milk",
+          "Amul Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return AmulMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -47,7 +57,7 @@ class _DudhsagarDairyMilkState extends State<DudhsagarDairyMilk> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Dudhsagar Milk",
+                    "Amul Milk",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),

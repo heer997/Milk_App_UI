@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/Quality_Ghee/QualityGhee_Notifications.dart";
 
 class QualityGhee extends StatefulWidget {
   const QualityGhee({super.key});
@@ -29,7 +30,16 @@ class _QualityGheeState extends State<QualityGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return QualityGheeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Avin_Milk/AvinMilk_Notifications.dart";
 
-class CamelMilk extends StatefulWidget {
-  const CamelMilk({super.key});
+class AvinMilk extends StatefulWidget {
+  const AvinMilk({super.key});
 
   @override
-  State<CamelMilk> createState() => _CamelMilkState();
+  State<AvinMilk> createState() => _AvinMilkState();
 }
 
-class _CamelMilkState extends State<CamelMilk> {
+class _AvinMilkState extends State<AvinMilk> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _CamelMilkState extends State<CamelMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Camel Milk",
+          "Avin Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return AvinMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -41,13 +51,13 @@ class _CamelMilkState extends State<CamelMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Camel_Milk_Bottle.webp",
+                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Camel Milk",
+                    "Avin Milk",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
@@ -59,7 +69,7 @@ class _CamelMilkState extends State<CamelMilk> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Best Farm Camel",
+                        "Best Farm Cow",
                         style: TextStyle(fontSize: 20.0),
                       ),
                       Text(

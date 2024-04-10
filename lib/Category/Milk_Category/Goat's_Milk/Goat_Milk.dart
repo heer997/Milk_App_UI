@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Goat's_Milk/GoatsMilk_Notifications.dart";
 
 class GoatMilk extends StatefulWidget {
   const GoatMilk({super.key});
@@ -29,7 +30,16 @@ class _GoatMilkState extends State<GoatMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GoatsMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

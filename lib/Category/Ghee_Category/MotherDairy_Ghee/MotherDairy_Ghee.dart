@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/MotherDairy_Ghee/MotherDairyGhee_Notifications.dart";
 
 class MotherDairyGhee extends StatefulWidget {
   const MotherDairyGhee({super.key});
@@ -29,7 +30,16 @@ class _MotherDairyGheeState extends State<MotherDairyGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MotherDairyGheeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

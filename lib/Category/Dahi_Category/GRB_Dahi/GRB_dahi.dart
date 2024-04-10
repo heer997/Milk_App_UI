@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/GRB_Dahi/GRBDahi_Notifications.dart";
 
 class GRBDahi extends StatefulWidget {
   const GRBDahi({super.key});
@@ -29,7 +30,16 @@ class _GRBDahiState extends State<GRBDahi> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GRBDahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

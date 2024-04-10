@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/DudhsagarDairy_Milk/DudhsagarDairyMilk_Notifications.dart";
 
 class DudhsagarGhee extends StatefulWidget {
   const DudhsagarGhee({super.key});
@@ -29,7 +30,16 @@ class _DudhsagarGheeState extends State<DudhsagarGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DudhsagarDairyMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

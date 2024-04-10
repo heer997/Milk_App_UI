@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/Nestle_ButterMilk/NestleButterMilk_Notifications.dart";
 
 class GRBButterMilk extends StatefulWidget {
   const GRBButterMilk({super.key});
@@ -29,7 +30,16 @@ class _GRBButterMilkState extends State<GRBButterMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return NestleButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

@@ -4,6 +4,7 @@ import "package:wscubetech_app_ui/Category/Milk_Category/Buffalo's_Milk/Buffalo_
 import "package:wscubetech_app_ui/Category/Milk_Category/Camel's_Milk/Camel_Milk.dart";
 import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Cow's_Milk_All.dart";
 import "package:wscubetech_app_ui/Category/Milk_Category/Goat's_Milk/Goat_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Milk_Notifications.dart";
 import "package:wscubetech_app_ui/Category/Milk_Category/Sheep's_Milk/Sheep_Milk.dart";
 
 class MilkCategory extends StatelessWidget {
@@ -21,7 +22,16 @@ class MilkCategory extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

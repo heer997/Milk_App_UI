@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/Amul_Dahi/Amul_dahi.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/Dahi_Notification.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/Dudhsagar_Dahi/Dudhsagar_dahi.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/GRB_Dahi/GRB_dahi.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/MotherDairy_Dahi/MotherDairy_dahi.dart";
@@ -23,7 +24,16 @@ class DahiCategory extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

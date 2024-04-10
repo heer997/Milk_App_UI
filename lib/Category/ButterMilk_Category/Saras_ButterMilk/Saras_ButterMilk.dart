@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/ButterMilk_Category/Saras_ButterMilk/SarasButterMilk_Notifications.dart";
 
 class SarasButterMilk extends StatefulWidget {
   const SarasButterMilk({super.key});
@@ -29,7 +30,16 @@ class _SarasButterMilkState extends State<SarasButterMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SarasButterMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

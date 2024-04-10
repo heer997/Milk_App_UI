@@ -3,6 +3,7 @@ import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Amul_Ghee/Amul_Ghee.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Dudhsagar_Ghee/Dudhsagar_Ghee.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/GRB_Ghee/GRB_Ghee.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/Ghee_Notifications.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/MotherDairy_Ghee/MotherDairy_Ghee.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Nestle_Ghee/Nestle_Ghee.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Organic_Ghee/Organic_Ghee.dart";
@@ -23,7 +24,16 @@ class GheeCategory extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GheeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

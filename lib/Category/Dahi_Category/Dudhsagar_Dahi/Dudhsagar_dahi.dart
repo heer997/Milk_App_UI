@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/Dudhsagar_Dahi/DudhsagarDahi_Notifications.dart";
 
 class DudhsagarDahi extends StatefulWidget {
   const DudhsagarDahi({super.key});
@@ -29,7 +30,16 @@ class _DudhsagarDahiState extends State<DudhsagarDahi> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DudhsagarDahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/Amul_Ghee/AmulGhee_Notifications.dart";
 
 class AmulGhee extends StatefulWidget {
   const AmulGhee({super.key});
@@ -29,7 +30,16 @@ class _AmulGheeState extends State<AmulGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return AmulGheeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

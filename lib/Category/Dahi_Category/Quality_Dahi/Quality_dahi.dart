@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/Quality_Dahi/QualityDahi_Notifications.dart";
 
 class QualityDahi extends StatefulWidget {
   const QualityDahi({super.key});
@@ -29,7 +30,16 @@ class _QualityDahiState extends State<QualityDahi> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return QualityDahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

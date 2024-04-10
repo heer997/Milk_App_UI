@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/Nestle_Dahi/NestleDahi_Notifications.dart";
 
 class NestleDahi extends StatefulWidget {
   const NestleDahi({super.key});
@@ -29,7 +30,16 @@ class _NestleDahiState extends State<NestleDahi> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return NestleDahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

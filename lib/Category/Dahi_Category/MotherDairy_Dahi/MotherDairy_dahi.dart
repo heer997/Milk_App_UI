@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Dahi_Category/MotherDairy_Dahi/MotherDairy_Notifications.dart";
 
 class MotherDairyDahi extends StatefulWidget {
   const MotherDairyDahi({super.key});
@@ -29,7 +30,16 @@ class _MotherDairyDahiState extends State<MotherDairyDahi> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MotherDairyDahiNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

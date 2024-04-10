@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Buffalo's_Milk/BuffalosMilk_Notifications.dart";
 
 class BuffaloMilk extends StatefulWidget {
   const BuffaloMilk({super.key});
@@ -29,7 +30,16 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return BuffalosMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

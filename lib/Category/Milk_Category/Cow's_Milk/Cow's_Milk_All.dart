@@ -1,12 +1,13 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Amul_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Avin_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/DudhsagarDairy_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/MotherDairy_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Nestle_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Quality_Milk.dart";
-import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Saras_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Amul_Milk/Amul_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Avin_Milk/Avin_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/CowsMilkNotifications.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/DudhsagarDairy_Milk/DudhsagarDairy_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/MotherDairy_Milk/MotherDairy_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Nestle_Milk/Nestle_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/Quality_Milk/Quality_Milk.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/SarasMillk/Saras_Milk.dart";
 
 class CowsMilk extends StatelessWidget {
   const CowsMilk({super.key});
@@ -23,7 +24,16 @@ class CowsMilk extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return CowsMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

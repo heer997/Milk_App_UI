@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/App_Drawer.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
-import "package:wscubetech_app_ui/Beverages/Lassi.dart";
-import "package:wscubetech_app_ui/Beverages/MilkShake.dart";
+import "package:wscubetech_app_ui/Beverages/Lassi/Lassi.dart";
+import "package:wscubetech_app_ui/Beverages/MilkShake/MilkShake.dart";
 import "package:wscubetech_app_ui/Category/ButterMilk_Category/ButterMilk_category.dart";
 import "package:wscubetech_app_ui/Category/Dahi_Category/Dahi_category.dart";
 import "package:wscubetech_app_ui/Category/Ghee_Category/Ghee_category.dart";
 import "package:wscubetech_app_ui/Category/Milk_Category/Milk_category.dart";
-import "package:wscubetech_app_ui/HomePage/Polular_Now/Buffalo_Milk.dart";
-import "package:wscubetech_app_ui/HomePage/Polular_Now/Camel_Milk.dart";
+import "package:wscubetech_app_ui/HomePage/Polular_Now/Buffalo_Milk/Buffalo_Milk.dart";
+import "package:wscubetech_app_ui/HomePage/Polular_Now/Camel_Milk/Camel_Milk.dart";
 import "package:wscubetech_app_ui/Notification/Notifications.dart";
 import "package:wscubetech_app_ui/Splash_Screen/Splash_Screen.dart";
 

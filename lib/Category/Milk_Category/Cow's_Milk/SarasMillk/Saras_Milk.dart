@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Milk_Category/Cow's_Milk/SarasMillk/SarasMilk_Notifications.dart";
 
-class BuffaloMilk extends StatefulWidget {
-  const BuffaloMilk({super.key});
+class SarasMilk extends StatefulWidget {
+  const SarasMilk({super.key});
 
   @override
-  State<BuffaloMilk> createState() => _BuffaloMilkState();
+  State<SarasMilk> createState() => _SarasMilkState();
 }
 
-class _BuffaloMilkState extends State<BuffaloMilk> {
+class _SarasMilkState extends State<SarasMilk> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Buffalo Milk",
+          "Saras Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SarasMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -41,13 +51,13 @@ class _BuffaloMilkState extends State<BuffaloMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Buffalo_Milk_Bottle.png",
+                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "Buffalo Milk",
+                    "Saras Milk",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),

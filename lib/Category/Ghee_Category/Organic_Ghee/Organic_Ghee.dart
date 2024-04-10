@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/Category/Ghee_Category/Organic_Ghee/OrganicGhee_Notifications.dart";
 
 class OrganicGhee extends StatefulWidget {
   const OrganicGhee({super.key});
@@ -29,7 +30,16 @@ class _OrganicGheeState extends State<OrganicGhee> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return OrganicGheeNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],

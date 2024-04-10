@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
 import "package:wscubetech_app_ui/App_Drawer/CustomWidget.dart";
+import "package:wscubetech_app_ui/HomePage/Polular_Now/Buffalo_Milk/BuffaloMilk_Notifications.dart";
 
-class MotherDairyMilk extends StatefulWidget {
-  const MotherDairyMilk({super.key});
+class BuffaloMilk extends StatefulWidget {
+  const BuffaloMilk({super.key});
 
   @override
-  State<MotherDairyMilk> createState() => _MotherDairyMilkState();
+  State<BuffaloMilk> createState() => _BuffaloMilkState();
 }
 
-class _MotherDairyMilkState extends State<MotherDairyMilk> {
+class _BuffaloMilkState extends State<BuffaloMilk> {
   bool isPressed = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -22,14 +23,23 @@ class _MotherDairyMilkState extends State<MotherDairyMilk> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "MotherDairy Milk",
+          "Buffalo Milk",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return BuffaloMilkNotifications();
+                  },
+                ),
+              );
+            },
             icon: const Icon(Icons.notification_add_outlined),
           ),
         ],
@@ -41,13 +51,13 @@ class _MotherDairyMilkState extends State<MotherDairyMilk> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 20.0),
-                Image.asset("assets/images/Amul_Taaza_Bottle.webp",
+                Image.asset("assets/images/Buffalo_Milk_Bottle.png",
                     height: 300.0, width: 300.0),
                 const SizedBox(height: 20.0),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: const Text(
-                    "MotherDairy Milk",
+                    "Buffalo Milk",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                   ),
